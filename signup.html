@@ -112,7 +112,7 @@
       <button type="submit">Sign Up</button>
       <p class="success" id="successMsg">Account created successfully!</p>
     </form>
-    <p>Already have an account? <a href="login.html">Login here</a></p>
+    <p>Already have an account? <a href="index.html">Login here</a></p>
   </div>
 
   <script>
@@ -122,11 +122,11 @@
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
 
-      // Store values in localStorage (not secure — just for demo)
+     
       localStorage.setItem("user", JSON.stringify({ name, email, username, password }));
 
       document.getElementById("successMsg").style.display = "block";
-      return false; // Prevent actual form submission
+      return false; 
     }
   </script>
 
