@@ -116,19 +116,25 @@
   </div>
 
   <script>
-    function registerUser() {
-      const name = document.getElementById("name").value;
-      const email = document.getElementById("email").value;
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
+  function registerUser() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
-     
-      localStorage.setItem("user", JSON.stringify({ name, email, username, password }));
+    localStorage.setItem("user", JSON.stringify({ name, email, username, password }));
 
-      document.getElementById("successMsg").style.display = "block";
-      return false; 
-    }
-  </script>
+    const successMsg = document.getElementById("successMsg");
+    successMsg.style.display = "block";
+
+    setTimeout(() => {
+      window.location.href = "home.html"; 
+    }, 1000);
+
+    return false; 
+  }
+</script>
+
 
 </body>
 </html>
