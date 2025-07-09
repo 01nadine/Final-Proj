@@ -1,0 +1,171 @@
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - ZUS Coffee</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body class="home-page">
+
+  <!--  Header -->
+  <header>
+    <nav class="navbar">
+      <div class="left-section">
+        <a href="#" class="logo">
+          <img src="Logo.png" alt="Coffee Logo">
+        </a>
+      </div>
+      <ul class="menu-links">
+        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+        <li><a href="home.html" class="active-link">Home</a></li>
+        <li><a href="menu.html" >Menu</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <span id="menu-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+  </header>
+
+  <!--  Slideshow Banner -->
+  <section class="slideshow">
+    <div class="slides">
+      <img src="1.png" alt="Promo 1">
+      <img src="2.png" alt="Promo 2">
+      <img src="3.png" alt="Promo 3">
+      <img src="4.png" alt="Promo 4">
+    </div>
+    <button class="nav prev">&#10094;</button>
+    <button class="nav next">&#10095;</button>
+  </section>
+
+  <!--  Featured Products -->
+  <section class="featured-products">
+    <h2>Our Bestsellers</h2>
+    <div class="product-grid">
+
+      <a href="menu.html" class="product-card" style="text-decoration: none; color: inherit;">
+        <img src="https://zuscoffee.ph/wp-content/uploads/2022/05/zus_gula_melaka.png" alt="Signature Latte">
+        <h3>Gula Melaka</h3>
+        <p>₱110</p>
+      </a>
+
+      <a href="menu.html" class="product-card" style="text-decoration: none; color: inherit;">
+        <img src="https://zuscoffee.com/wp-content/uploads/2022/05/spanish_latte.png" alt="Cold Brew">
+        <h3>Spanish Latte</h3>
+        <p>₱110</p>
+      </a>
+
+      <a href="menu.html" class="product-card" style="text-decoration: none; color: inherit;">
+        <img src="https://zuscoffee.ph/wp-content/uploads/2022/05/ceo_latte.png" alt="Espresso Shot">
+        <h3>CEO Latté</h3>
+        <p>₱105</p>
+      </a>
+
+  </div>
+</section>
+
+  <!--  Why Choose Us -->
+  <section class="why-us">
+    <h2>Why Choose ZUS</h2>
+    <div class="features">
+      <div class="feature">
+        <h4>Directly Traded</h4>
+        <p>We work closely with farmers to ensure quality beans, fair prices, and sustainable practices.</p>
+      </div>
+      <div class="feature">
+        <h4>Handcrafted</h4>
+        <p>Each drink is made with passion and barista precision.</p>
+      </div>
+      <div class="feature">
+        <h4>Eco-Friendly</h4>
+        <p>We use sustainable packaging and reusable materials.</p>
+      </div>
+    </div>
+  </section>
+
+  <!--  Testimonials -->
+  <section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonial-grid">
+      <blockquote>
+        “The best Latté in Manila! Great taste and fast delivery.” <br> <strong>— Ella G.</strong>
+      </blockquote>
+      <blockquote>
+        “I love the latte art and the chill ambiance. Highly recommended!” <br> <strong>— Marco T.</strong>
+      </blockquote>
+    </div>
+  </section>
+
+  <!--  Newsletter Signup -->
+  <section class="newsletter">
+    <h2>Get 10% Off Your First Order</h2>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+  </section>
+
+  <!--  About Preview -->
+  <section class="about-preview">
+    <h2>Mabuhay, Philippines!</h2>
+    <p>ZUS Coffee is thrilled to bring our specialty coffee straight to your cups. <br>
+      We believe that premium coffee should be accessible to everyone, 
+      <br> and we’re committed to delivering exceptional quality at an affordable price. 
+      <br> Handa ka na ba for the ultimate kape experience?</p>
+    <a href="about.html" class="about-btn">Read Our Story</a>
+  </section>
+
+  <!--  Footer -->
+  <footer>
+  <div class="footer-content">
+    <h3>Follow Us On</h3>
+    <div class="social-links">
+      <a href="https://www.facebook.com/ZUSCoffeePH/" target="_blank" aria-label="Facebook">
+        <img src="2021_Facebook_icon.svg.webp" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/zus.coffee/?hl=en" target="_blank" aria-label="Instagram">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <!--  Scripts -->
+  <script>
+    const header = document.querySelector("header");
+    const menuBtn = document.querySelector("#menu-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+    menuBtn.addEventListener("click", () => {
+      header.classList.add("show-mobile-menu"); 
+    });
+
+    closeMenuBtn.addEventListener("click", () => {
+      header.classList.remove("show-mobile-menu"); 
+    });
+
+    // Manual slideshow
+    let currentSlide = 0;
+    const slideImages = document.querySelectorAll(".slides img");
+
+    function showSlide(index) {
+      slideImages.forEach((img, i) => {
+        img.style.display = i === index ? 'block' : 'none';
+      });
+    }
+
+    document.querySelector(".nav.prev").addEventListener("click", () => {
+      currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+      showSlide(currentSlide);
+    });
+
+    document.querySelector(".nav.next").addEventListener("click", () => {
+      currentSlide = (currentSlide + 1) % slideImages.length;
+      showSlide(currentSlide);
+    });
+
+    showSlide(currentSlide);
+  </script>
+
+</body>
+</html>
+

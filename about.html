@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - ZUS Coffee</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #F8F1F1;
+      color: #0A065D;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #D2C8C8;
+      padding: 10px 30px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .menu-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+
+    .hero-banner {
+      width: 100%;
+      height: 150vh;
+      max-height: 800px;
+      overflow: hidden;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .menu-links a {
+      color: #0A065D;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .menu-links a:hover, .active-link {
+      color: #A3816A;
+    }
+
+    .about-section {
+      padding: 140px 20px 60px;
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+    }
+
+    .about-section h1, .about-section h2 {
+      color: #0A065D;
+    }
+
+    .about-section p, .about-section li {
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .about-image {
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+
+    .services {
+      padding-left: 20px;
+    }
+
+    footer {
+      background: #0A065D;
+      color: #F8F1F1;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .social-links img {
+      height: 24px;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .menu-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .about-section {
+        padding-top: 180px;
+      }
+    }
+  </style>
+</head>
+</head>
+<body class="about-page">
+
+  <!-- ✅ Header -->
+  <header>
+    <nav class="navbar">
+      <div class="left-section">
+        <a href="index.html" class="logo">
+          <img src="Logo.png" alt="Coffee Logo">
+        </a>
+      </div>
+      <ul class="menu-links">
+        <span id="close-menu-btn" class="material-symbols-outlined">close</span>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html" class="active-link">About Us</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <span id="menu-btn" class="material-symbols-outlined">menu</span>
+    </nav>
+  </header>
+    <br> <br>
+        <section class="hero-banner">
+          <img src="https://zuscoffee.ph/wp-content/uploads/2019/10/home_bg.jpg" alt="Café">
+        </section>
+
+  <!-- ✅ About Content -->
+  <section class="about-section">
+    <div class="container">
+
+      <h1 style="color:#0B1D51;">Our Story</h1>
+      <p>
+        ZUS Coffee’s story began in 2019—not with a physical store, but through a forward-thinking mobile app. 
+        Driven by our founders' passion to reshape the specialty coffee scene, the goal was simple: to make high-quality coffee accessible to everyone.
+        They envisioned a world where enjoying premium coffee didn’t mean compromising between quality and affordability.
+      </p>
+      <img src ="https://zuscoffee.ph/wp-content/uploads/2022/03/ZUS_Binjai@first_outlet.jpg" alt="Our Café" class="about-image">
+
+      <p>
+        From the first interaction on our app to launching our very first outlet in Malaysia, our purpose has always been to turn specialty coffee into an everyday essential.
+        Our promise? Delivering clean, consistent, and carefully crafted coffee with every cup. 
+        To date, we’re proud to have served over 39 million cups—an achievement made possible by the trust and support of our cherished ZUSsies.      
+    </p>
+    <p>
+        As we continue to grow, our belief holds strong:
+        ZUS Coffee is a Necessity, not a Luxury.
+      </p>
+      <img src="BG2.jpg" alt="Coffee Beans" class="about-image">
+
+      <h2>What We Offer</h2>
+      <ul class="services">
+        <li><strong>Freshly Brewed Coffee:</strong> Barista-crafted espresso, cappuccino, and cold brews using premium local beans.</li>
+        <li><strong>Pastries & Snacks:</strong> A curated selection of baked goods, sandwiches, and desserts to pair with your favorite brew.</li>
+        <li><strong>Online Orders & Delivery:</strong> Enjoy our signature coffee at home with just a few clicks.</li>
+        <li><strong>Merch & Beans:</strong> Take home our signature roast or shop our limited-edition merchandise.</li>
+      </ul>
+      <img src="https://www.1utama.com.my/images/tenant/G601A-Zus,Coffee%20Meet%20Pastry%20(30.7.2024).jpg?20250702" alt="Coffee and Pastries" class="about-image">
+
+      <h2>ZUS Coffee Blend</h2>
+      <p>
+        ZUS Coffee has partnered with renown Coffee Roaster, Coffex Coffee, and are committed to the practice of only procuring Direct Trade Beans.
+        Any form of green bean procurement is done directly with the farmers of the beans and allows for quality, sustainability, and fairer prices that is then translated to the final cup that our customers pay for. 
+        Direct Trade helps farmers develop with us and have a more sustainable future & growth together
+      </p>
+      <img src="https://media.istockphoto.com/id/1337868614/photo/hand-of-female-akha-farmer-tribe-is-harvesting-ripe-coffee-beans-from-branch-in-plantation.jpg?s=612x612&w=0&k=20&c=10boNjRRxg6BYjFpAHO9zJXakD-iBulGGM6FO8bPi_w=" alt="Coffee Roasting" class="about-image">
+
+      <p>
+        Our baristas then craft each drink with precision—from grinding and tamping to brewing and presentation. We believe in transparency, sustainability, and honoring the farmers behind each bean.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+  <div class="footer-content">
+    <h3>Follow Us On</h3>
+    <div class="social-links">
+      <a href="https://www.facebook.com/ZUSCoffeePH/" target="_blank" aria-label="Facebook">
+        <img src="2021_Facebook_icon.svg.webp" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/zus.coffee/?hl=en" target="_blank" aria-label="Instagram">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    const header = document.querySelector("header");
+    const menuBtn = document.querySelector("#menu-btn");
+    const closeMenuBtn = document.querySelector("#close-menu-btn");
+
+    menuBtn.addEventListener("click", () => {
+      header.classList.add("show-mobile-menu"); 
+    });
+
+    closeMenuBtn.addEventListener("click", () => {
+      header.classList.remove("show-mobile-menu"); 
+    });
+  </script>
+
+</body>
+</html>
+

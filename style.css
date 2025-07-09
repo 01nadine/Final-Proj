@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #F8F1F1;
+  color: #0A065D;
+}
+
+/* ✅ Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #D2C8C8;
+  z-index: 2;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a.active-link {
+  color: #A3816A;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 15px 30px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.menu-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.menu-links a {
+  color: #0A065D;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-links a:hover,
+.menu-links a.active-link {
+  color: #A3816A;
+}
+
+/* ✅ Slideshow */
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 100px;
+  background: #FFF7F0;
+}
+
+.slideshow .slides {
+  display: flex;
+  width: 100%;
+}
+
+.slideshow .slides img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: none;
+}
+
+.slideshow .slides img.active {
+  display: block;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.nav.prev {
+  left: 10px;
+}
+
+.nav.next {
+  right: 10px;
+}
+
+/* ✅ Featured Products */
+.featured-products {
+  background: #FFF;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.featured-products h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.product-grid:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card :hover img {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  background: #F8F1F1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 250px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* ✅ Why Choose Us */
+.why-us {
+  background: #D2C8C8;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.feature {
+  max-width: 300px;
+}
+
+/* ✅ Testimonials */
+.testimonials {
+  background: #F8F1F1;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ✅ Newsletter */
+.newsletter {
+  background: #A3816A;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.newsletter input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 250px;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  background: #0A065D;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ✅ About Preview */
+.about-preview {
+  background: #FFF7F0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #0A065D;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* ✅ Footer */
+footer {
+  background: #0A065D;
+  color: #F8F1F1;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.footer-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.footer-content .social-links {
+  margin-top: 10px;
+}
+
+.footer-content .social-links img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+/* ✅ Responsive */
+#menu-btn {
+  color: #0A065D;
+  cursor: pointer;
+  display: none;
+}
+
+#close-menu-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  #close-menu-btn,
+  #menu-btn {
+    display: block;
+  }
+
+  .navbar .menu-links {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    flex-direction: column;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    padding: 70px 40px 0;
+    transition: left 0.15s ease;
+    z-index: 3;
+  }
+
+  header.show-mobile-menu .navbar .menu-links {
+    left: 0;
+  }
+
+  .navbar a {
+    color: #0A065D;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-section .content {
+    text-align: center;
+  }
+
+  .hero-section .content h1 {
+    font-size: 2.3rem;
+    line-height: 60px;
+  }
+
+  .hero-section .content button {
+    padding: 9px 18px;
+  }
+}
+
+.menu-section {
+  background: #FFF7F0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  background: #F8F1F1;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-grid .menu-item img {
+  height: 350px; /* Taller coffee images */
+  width: 80%;
+}
+
+.coffee-grid .menu-item {
+  width: 100%;
+  padding: 25px;
+  background: #F8F1F1; /* optional, coffee-specific background */
+}
+
+.menu-item img {
+  width: 70%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+  background-color: #E9DDDD; /* Slightly different shade on hover */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.menu-item:hover img {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
