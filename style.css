@@ -12,7 +12,6 @@ body {
   color: #0A065D;
 }
 
-/* ✅ Header */
 header {
   position: fixed;
   top: 0;
@@ -59,7 +58,6 @@ header {
   color: #A3816A;
 }
 
-/* ✅ Slideshow */
 .slideshow {
   position: relative;
   width: 100%;
@@ -105,7 +103,6 @@ header {
   right: 10px;
 }
 
-/* ✅ Featured Products */
 .featured-products {
   background: #FFF;
   padding: 60px 20px;
@@ -152,7 +149,6 @@ header {
   margin-bottom: 10px;
 }
 
-/* ✅ Why Choose Us */
 .why-us {
   background: #D2C8C8;
   padding: 60px 20px;
@@ -175,7 +171,6 @@ header {
   max-width: 300px;
 }
 
-/* ✅ Testimonials */
 .testimonials {
   background: #F8F1F1;
   padding: 60px 20px;
@@ -190,7 +185,6 @@ header {
   margin: 0 auto;
 }
 
-/* ✅ Newsletter */
 .newsletter {
   background: #A3816A;
   color: white;
@@ -215,7 +209,6 @@ header {
   cursor: pointer;
 }
 
-/* ✅ About Preview */
 .about-preview {
   background: #FFF7F0;
   padding: 60px 20px;
@@ -232,7 +225,6 @@ header {
   border-radius: 4px;
 }
 
-/* ✅ Footer */
 footer {
   background: #0A065D;
   color: #F8F1F1;
@@ -259,7 +251,6 @@ footer {
   margin: 0 10px;
 }
 
-/* ✅ Responsive */
 #menu-btn {
   color: #0A065D;
   cursor: pointer;
@@ -351,14 +342,14 @@ footer {
 }
 
 .coffee-grid .menu-item img {
-  height: 350px; /* Taller coffee images */
+  height: 350px; 
   width: 80%;
 }
 
 .coffee-grid .menu-item {
   width: 100%;
   padding: 25px;
-  background: #F8F1F1; /* optional, coffee-specific background */
+  background: #F8F1F1; 
 }
 
 .menu-item img {
@@ -371,7 +362,7 @@ footer {
 
 .menu-item:hover {
   transform: scale(1.05);
-  background-color: #E9DDDD; /* Slightly different shade on hover */
+  background-color: #E9DDDD; 
   transition: all 0.3s ease;
   cursor: pointer;
 }
